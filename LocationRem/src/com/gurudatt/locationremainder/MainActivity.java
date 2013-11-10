@@ -3,15 +3,12 @@ package com.gurudatt.locationremainder;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
-import android.widget.FrameLayout;
 
 import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.ActionBar.TabListener;
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.app.ActionBar.Tab;
+import com.actionbarsherlock.app.ActionBar.TabListener;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 public class MainActivity extends SherlockFragmentActivity{
 	private ActionBar bar;
@@ -32,6 +29,7 @@ public class MainActivity extends SherlockFragmentActivity{
 	
 	private ViewPager.SimpleOnPageChangeListener onPageChangeListener=new SimpleOnPageChangeListener(){
 		
+		@Override
 		public void onPageSelected(int position) {
 			super.onPageSelected(position);
 			bar.setSelectedNavigationItem(position);

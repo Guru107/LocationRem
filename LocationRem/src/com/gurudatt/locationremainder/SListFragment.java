@@ -28,10 +28,13 @@ public class SListFragment extends SherlockFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-//		ViewGroup parent=(ViewGroup)v.getParent();
-//		if(parent!=null){
-//			parent.removeView(v);
-//		}
+		if(v!=null){
+			ViewGroup parent=(ViewGroup) v.getParent();
+			if(parent!=null){
+				parent.removeView(v);
+			}
+		}
+
 		try{
 			
 			v=inflater.inflate(R.layout.list_fragment, container, false);
@@ -68,7 +71,7 @@ public class SListFragment extends SherlockFragment {
 	void showDialog()
 	{
 		FragmentTransaction ft=getFragmentManager().beginTransaction();
-		SherlockFragment prev=(SherlockFragment) getFragmentManager().findFragmentByTag("dialog");
+		SherlockFragment prev=(SherlockFragment) getFragmentManager().findFragmentById(R.layout.reminder_dialog);
 		if(prev!=null){
 			ft.remove(prev);
 		}

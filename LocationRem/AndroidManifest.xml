@@ -34,7 +34,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.gurudatt.locationremainder.LoginActivity"/>
-        <activity android:name="com.gurudatt.locationremainder.RegisterActivity"/>      
+        <activity android:name="com.gurudatt.locationremainder.RegisterActivity"/> 
+             
         <meta-data android:name="com.google.android.maps.v2.API_KEY" 
             android:value="AIzaSyCxF9TapsfWRfwXyIQNtrSRnhoC4WLN7jE"/>
     </application>

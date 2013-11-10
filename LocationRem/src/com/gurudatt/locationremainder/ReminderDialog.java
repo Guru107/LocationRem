@@ -1,7 +1,6 @@
 package com.gurudatt.locationremainder;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,13 +33,15 @@ public class ReminderDialog extends SherlockDialogFragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		if(v!=null){
 		ViewGroup parent=(ViewGroup) v.getParent();
 		if(parent!=null){
 			parent.removeView(v);
 			
+		}
 		}try{
 			v=inflater.inflate(R.layout.reminder_dialog, container, false);
-			initialize();
+			
 		}catch (InflateException e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -52,6 +53,7 @@ public class ReminderDialog extends SherlockDialogFragment{
 	public void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
+		initialize();
 		btnSet.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
